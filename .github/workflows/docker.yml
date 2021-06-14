@@ -15,6 +15,6 @@ jobs:
         with:
           username: biningo
           password: ${{ secrets.DOCKER_TOKEN }}
-          registry: ghcr.io
-          repository: biningo/showip
+          registry: docker.pkg.github.com
+          repository: biningo/showip/showip
           tags: showip:latest
