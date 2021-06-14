@@ -4,6 +4,6 @@ WORKDIR /build
 ADD . /build/
 RUN CGO_ENABLED=0 go build -a -ldflags "-s -w" -o showip /build/
 
-FROM busybox:1.32.0
+FROM scratch
 COPY --from=builder /build/showip /
 CMD ["/showip"]
